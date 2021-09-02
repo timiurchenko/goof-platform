@@ -6,4 +6,9 @@ ignore:
     - '*':
         reason: ' Added from CLI'
         expires: 2021-09-09T00:00:00.000Z
+  'snyk:lic:npm:goof:GPL-2.0':
+    - '*':
+        reason: ' Added from CLI through .snyk file and snyk ignores'
+        expires: 2021-09-09T00:00:00.000Z
+        created: 2021-09-02T18:04:16.156Z
 patch: {}
