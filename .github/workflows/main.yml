@@ -10,8 +10,9 @@ jobs:
         run: npm install
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
-        command: monitor
-        args: --all-projects --org=ninja-snyker --remote-repo-url=github-ci --json
+        with:
+         command: monitor
+         args: --all-projects --org=ninja-snyker --remote-repo-url=github-ci --json
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
