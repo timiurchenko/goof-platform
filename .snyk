@@ -12,4 +12,10 @@ ignore:
         reason: ' Added from CLI for TF again'
         expires: 2021-09-09T00:00:00.000Z
         created: 2021-08-26T13:12:05.139Z
+        
+   'npm:underscore.string:20170908':
+    - '*':
+        reason: Change through .snyk file
+        expires: 2022-04-09T16:36:21.691Z
+        created: 2022-03-10T16:36:21.699Z
 patch: {}
