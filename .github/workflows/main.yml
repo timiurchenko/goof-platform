@@ -34,7 +34,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
         with:
-          args: --file=SCA/Java/pom.xml
+          args: --file=SCA/Java/todolist-web-struts/pom.xml
   Snyk_SAST_Test:
     runs-on: ubuntu-latest
     steps:
