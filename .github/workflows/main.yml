@@ -15,7 +15,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  Snyk_SCA_Test:
+  Snyk_SCA_NPM_Test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -24,7 +24,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --all-projects
+          args: --file=SCA/JS/package-lock.json
   Snyk_SAST_Test:
     runs-on: ubuntu-latest
     steps:
