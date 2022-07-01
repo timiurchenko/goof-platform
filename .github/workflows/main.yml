@@ -28,6 +28,7 @@ jobs:
   Snyk_SCA_MVN_Test:
     runs-on: ubuntu-latest
     steps:
+      - run: docker run --rm -it --env SNYK_TOKEN=a1fb4b02-a92c-4e9c-8ce1-d1211eac741e -v $(PWD):/app snyk/snyk:maven
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
