@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.22.1
+version: v1.25.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-PATHPARSE-1077067:
@@ -11,4 +11,20 @@ ignore:
         reason: ' Added from CLI through .snyk file and snyk ignores'
         expires: 2021-09-09T00:00:00.000Z
         created: 2021-09-03T19:20:23.214Z
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - tap > tap-mocha-reporter > debug:
+        patched: '2023-01-03T20:28:05.493Z'
+    - karma > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2023-01-03T20:28:05.493Z'
+    - karma > chokidar > readdirp > micromatch > snapdragon > debug:
+        patched: '2023-01-03T20:28:05.493Z'
+    - karma > chokidar > readdirp > micromatch > braces > snapdragon > debug:
+        patched: '2023-01-03T20:28:05.493Z'
+    - karma > chokidar > readdirp > micromatch > extglob > snapdragon > debug:
+        patched: '2023-01-03T20:28:05.493Z'
+    - karma > chokidar > readdirp > micromatch > nanomatch > snapdragon > debug:
+        patched: '2023-01-03T20:28:05.493Z'
+    - karma > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2023-01-03T20:28:05.493Z'
